@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 class="mainheading">JS - Handoson : 5 Strings</h1>
+
+    <div class="boxes">
+        <h2>Ques. 1 Count Characters </h2>
+        <pre class="code">
+        const countCharacters = (S) => 
+            {
+                let b=[];
+                countA = 0;
+                countB = 0;
+                for ( let i = 0 ; i  <= S.length  ; i++)
+                {
+                  if (S.charAt(i) === 'A'){
+                    countA = countA + 1;
+                  }
+                  else if (S.charAt(i) === 'D'){
+                    countB = countB + 1;
+                  }
+                }
+                b.push(countA);
+                b.push(countB)
+              
+              return b;
+            };
+             
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 2 Count the Heads </h2>
+        <pre class="code">
+        var Count_Occ = (s) => 
+            {
+              let freeArr = new Array(100);
+              freeArr.fill(0);
+              let res= '';
+              for (let i =0 ; i < s.length ; i++){
+                freeArr[s[i].charCodeAt()-97]++;
+                
+              }
+              
+              for (let j = 0 ; j < 26 ; j++){
+                if(freeArr[j] > 1){
+                  res += String.fromCharCode(j+97);
+                  res += freeArr[j];
+                }
+              }
+              return res;
+            };
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 3. Count the Vowels </h2>
+        <pre class="code">
+        var Count_Vowels= (S) => 
+            {  let count =0 
+                 for (let i =0 ; i < S.length ; i++ ) {
+                   if (S.charAt(i) === 'a' || S.charAt(i) === 'A' || S.charAt(i) === 'e' || S.charAt(i) === 'E' || S.charAt(i) === 'i' || S.charAt(i) === 'I'
+                   || S.charAt(i) === 'o' || S.charAt(i) === 'O' || S.charAt(i) === 'u' ||  S.charAt(i) === 'U'){
+                     count = count +1 ;
+                   }
+                 }
+                 return count;
+            };
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 4. Concatenate the Strings </h2>
+        <pre class="code">
+        var Concatenate_Strings = (S1, S2) => 
+            {
+                  return S1.concat(S2);
+            };
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 5. Find Length </h2>
+        <pre class="code">
+        const findLength = (S) => 
+            {
+                let length = Array.from(S).reduce(function(count){return count+1}, 0);
+                 return length
+            };
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 6. Find the Winner </h2>
+        <pre class="code"> 
+        var Game_Winner = (S) => 
+            {
+              countA = 0 ;
+              countD = 0 ; 
+              for ( let i = 0 ; i < S.length ; i ++){
+                if (S.charAt(i) === 'A'){
+                  countA = countA + 1;
+                }
+                else{
+                  countD = countD + 1;
+                }
+              }
+              if(countA === countD ){
+                return "Draw"
+              }
+              else if (countA > countD){
+                return "Aditya";
+              }
+              else {
+                return "Danish";
+              }
+             
+        }
+    </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 7. Join Strings </h2>
+        <pre class="code">
+        const joinStrings = (S, P) => 
+            {
+                return S.concat(P);
+            };
+    </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 8. Plaindrome Check </h2>
+        <pre class="code">
+        var Palin_Check = (str) =>
+            {
+               var plaindrome = '';
+               for (let i = str.length -1 ; i >= 0 ; i--)
+              {
+                plaindrome = plaindrome + str.charAt(i);
+              }
+              if  (plaindrome === str) {
+                return  "True" 
+              }
+              else{
+                return  "False";
+              } 
+            }
+            
+    </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 9. Reverse the String </h2>
+        <pre class="code">
+        var Reverse_String = (str) => 
+            {
+                 newstr ='';
+                 for (let i = str.length-1 ; i >=0 ; i--){
+                   newstr = newstr + str.charAt(i);
+                 }
+                 return newstr;
+            };
+    </pre>
+    </div>
+    
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 10. Match the Strings </h2>
+        <pre class="code">
+        var String_Match = (S1,S2) => 
+            {
+                return S1===S2 ? 'YES' : 'NO'
+            };
+    </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 11. String Replace </h2>
+        <pre class="code">
+        var Replace = (S, pattern , text) => 
+            {
+                  S = S.replace(pattern , text)
+                  return S;
+            };
+    </pre>
+    </div>
+    
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 12. Split the String </h2>
+        <pre class="code">
+        var Split_the_string = (S) => 
+            {
+              return S.split(' ')
+                    
+            };
+    </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 13. Count the Vowels and Consonants </h2>
+        <pre class="code">
+        var Count_Vowels= (S) => 
+            {
+                  let count =0 
+                 for (let i =0 ; i < S.length ; i++ ) {
+                   if (S.charAt(i) === 'a' || S.charAt(i) === 'A' || S.charAt(i) === 'e' || S.charAt(i) === 'E' || S.charAt(i) === 'i' || S.charAt(i) === 'I'
+                   || S.charAt(i) === 'o' || S.charAt(i) === 'O' || S.charAt(i) === 'u' ||  S.charAt(i) === 'U'){
+                     count = count +1 ;
+                   }
+                 }
+                 return count;
+            };
+        
+        
+        var Count_Consonants= (S) => 
+            {
+                    let count =0 
+                 for (let i =0 ; i < S.length ; i++ ) {
+                   if (S.charAt(i) === 'a' || S.charAt(i) === 'A' || S.charAt(i) === 'e' || S.charAt(i) === 'E' || S.charAt(i) === 'i' || S.charAt(i) === 'I'
+                   || S.charAt(i) === 'o' || S.charAt(i) === 'O' || S.charAt(i) === 'u' ||  S.charAt(i) === 'U'){
+                     count = count +1 ;
+                   }
+                 }
+                 return S.length- count;
+            };
+    </pre>
+    </div>
+
+    <h1 class = 'mainheading'> ************** </h1>
+</body>
+</html>
